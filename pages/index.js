@@ -52,20 +52,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section id="testimonials">
-        <h2 className="text-2xl font-semibold mb-4">Testimonials</h2>
-        <div className="space-y-4">
-          <div className="border p-4 rounded-xl shadow-sm">
-            <p><em>"The coaching sessions were insightful and helped me climb the ladder efficiently."</em></p>
-            <p className="font-semibold mt-2">— Alex, UK</p>
-          </div>
-          <div className="border p-4 rounded-xl shadow-sm">
-            <p><em>"Affordable and effective coaching. Highly recommended!"</em></p>
-            <p className="font-semibold mt-2">— Maria, Spain</p>
-          </div>
-        </div>
-      </section>
+     {/* Testimonials */}
+<section id="testimonials">
+  <h2 className="text-2xl font-semibold mb-4">Student Feedback Coming Soon</h2>
+  <p className="text-gray-700">
+    Since this is a brand new service, I don't have testimonials yet — but I’m looking forward to sharing real feedback from my future students soon.
+  </p>
+</section>
+
 
       {/* Contact */}
       <section id="contact">

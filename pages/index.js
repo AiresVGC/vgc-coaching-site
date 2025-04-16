@@ -60,7 +60,6 @@ export default function HomePage() {
   </p>
 </section>
 
-
       {/* Contact */}
       <section id="contact">
         <h2 className="text-2xl font-semibold mb-2">Contact & Booking</h2>

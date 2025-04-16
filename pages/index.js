@@ -52,13 +52,14 @@ export default function HomePage() {
         </div>
       </section>
 
-     {/* Testimonials */}
 <section id="testimonials">
   <h2 className="text-2xl font-semibold mb-4">Student Feedback Coming Soon</h2>
   <p className="text-gray-700">
-    Since this is a brand new service, I don't have testimonials yet — but I’m looking forward to sharing real feedback from my future students soon.
+    This is a new coaching service, so I don't have testimonials yet — but once players start training with me,
+    I’ll be excited to share their feedback here!
   </p>
 </section>
+
   
       {/* Contact */}
       <section id="contact">

@@ -7,7 +7,7 @@ export default function HomePage() {
       <section className="text-center space-y-4">
         <h1 className="text-4xl font-bold">Affordable & Personalized Pokémon VGC Coaching</h1>
         <p className="text-lg">Unlock your potential in competitive Pokémon with expert guidance tailored to your needs.</p>
-        <a href="#contact" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg text-lg">Book Your Session Now</a>
+        <a href="#booking" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg text-lg">Book Your Session Now</a>
       </section>
 
       {/* About Me */}

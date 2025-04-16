@@ -59,7 +59,7 @@ export default function HomePage() {
     Since this is a brand new service, I don't have testimonials yet — but I’m looking forward to sharing real feedback from my future students soon.
   </p>
 </section>
-
+  
       {/* Contact */}
       <section id="contact">
         <h2 className="text-2xl font-semibold mb-2">Contact & Booking</h2>

@@ -69,6 +69,25 @@ export default function HomePage() {
         <p className="mt-2">To schedule a session, reach out via email or Discord. A booking form is coming soon!</p>
       </section>
 
+  {/* Booking Form */}
+<section id="booking">
+  <h2 className="text-2xl font-semibold mb-4">Book a Coaching Session</h2>
+  <p className="mb-4 text-gray-700">Use the form below to request a coaching session. I’ll get back to you shortly!</p>
+  <div className="w-full overflow-hidden rounded-xl shadow-md">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdOxUj04gzne5sRd6cM-zwjbsiTqLcUhGHSLasjujMKyye1Ig/viewform?embedded=true"
+      width="100%"
+      height="1508"
+      frameBorder="0"
+      marginHeight="0"
+      marginWidth="0"
+      title="Booking Form"
+    >
+      Loading…
+    </iframe>
+  </div>
+</section>
+
       {/* Why Choose Me */}
       <section>
         <h2 className="text-2xl font-semibold mb-2">Why Choose Me?</h2>

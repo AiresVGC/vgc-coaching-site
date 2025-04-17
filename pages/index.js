@@ -9,14 +9,12 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen text-white bg-fixed bg-cover bg-center" 
-      style={{
-        backgroundImage: "url('/background.png')",
-        backgroundSize: "cover", 
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",  // Ensures fixed background on scroll
-      }}
-    >
+    <div className="min-h-screen text-white" style={{
+      backgroundImage: "url('/background.png')",
+      backgroundSize: "cover",  // Ensures image covers the screen without stretching
+      backgroundPosition: "center", // Ensures the image is centered
+      backgroundAttachment: "fixed", // Keeps the background fixed while scrolling
+    }}>
       {/* Navigation Bar */}
       <nav className="fixed top-0 w-full bg-black/70 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -59,9 +57,9 @@ export default function HomePage() {
         className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center"
         style={{
           backgroundImage: "url('/background.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",  // Ensures fixed background on scroll
+          backgroundSize: "cover", // Ensures image covers the screen without stretching
+          backgroundPosition: "center", // Centers the image
+          backgroundAttachment: "fixed", // Keeps the background fixed while scrolling
         }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
@@ -159,9 +157,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
-        {/* Adding Extra Bottom Padding */}
-        <div className="pb-16"></div>
       </div>
     </div>
   );

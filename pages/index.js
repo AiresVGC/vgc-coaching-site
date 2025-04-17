@@ -1,13 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import logo from "@/public/logo.png"; // You should place the logo file in the public folder and name it logo.png
 
 export default function HomePage() {
   return (
     <div className="p-6 max-w-4xl mx-auto space-y-10">
       {/* Header with Logo */}
       <header className="flex flex-col items-center space-y-4">
-        <Image src={logo} alt="Top Cut Gym Logo" width={120} height={120} />
+        <Image src="/logo.png" alt="Top Cut Gym Logo" width={120} height={120} />
         <h1 className="text-4xl font-bold text-center text-yellow-500">Top Cut Gym</h1>
         <p className="text-lg text-center text-gray-100 max-w-xl">
           Train like a champion. Cut through the competition.

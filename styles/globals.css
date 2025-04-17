@@ -1,12 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Custom CSS to fix background image scaling on mobile */
-@media (max-width: 767px) {
-  .min-h-screen {
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll; /* Prevent fixed background on mobile */
-  }
-}

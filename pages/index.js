@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div className="bg-black min-h-screen p-6 max-w-4xl mx-auto space-y-10 text-white">
+    <div className="bg-black min-h-screen p-6 max-w-7xl mx-auto space-y-10 text-white">
       {/* Header with Logo */}
       <header className="flex flex-col items-center space-y-4">
         <Image src="/logo.png" alt="Top Cut Gym Logo" width={120} height={120} />

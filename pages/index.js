@@ -10,12 +10,8 @@ export default function HomePage() {
 
   return (
     <div
-      className="min-h-screen text-white"
-      style={{
-        backgroundImage: "url('/background.png')",
-        backgroundSize: "cover", // Ensures image covers the screen without stretching
-        backgroundPosition: "center", // Ensures the image is centered
-        backgroundAttachment: "fixed", // Keeps the background fixed while scrolling
+  className="min-h-screen text-white bg-fixed bg-center bg-cover sm:bg-[length:100%_100%]"
+  style={{ backgroundImage: "url('/background.png')"
         paddingBottom: "50px", // Add space at the bottom of the page
       }}
     >

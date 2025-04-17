@@ -10,7 +10,7 @@ export default function HomePage() {
 
   return (
     <div
-      className="min-h-screen text-white bg-fixed bg-center bg-cover sm:bg-[length:100%_100%]"
+      className="min-h-screen text-white bg-fixed bg-center bg-cover sm:bg-contain"
       style={{
         backgroundImage: "url('/background.png')",
         paddingBottom: "50px",
@@ -72,7 +72,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <div
-        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center sm:bg-[length:100%_100%]"
+        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center sm:bg-contain"
         style={{
           backgroundImage: "url('/background.png')",
           backgroundAttachment: "fixed",

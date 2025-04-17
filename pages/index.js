@@ -69,10 +69,9 @@ export default function HomePage() {
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-2 text-yellow-400">About Me</h2>
             <p className="text-gray-200">
-              I'm <strong>AiresVGC</strong>, the head coach of Top Cut Gym, with over 5 years of experience in competitive Pokémon VGC. 
-              I have participated in and won numerous local and regional competitions, consistently ranking among the top players in the scene. 
-              My approach is to teach players how to improve through a combination of strategic thinking, teamwork, and match analysis. 
-              Whether you are a beginner or an experienced player, I am dedicated to helping you become a top-tier competitor.
+              I'm <strong>AiresVGC</strong>, the head coach of Top Cut Gym, with over 5 years of experience in competitive Pokémon VGC.
+              Based in Portugal, I’ve consistently ranked top 100 and top 500 on ladder and Pokémon Showdown, and have earned Championship Points
+              in Global Challenges. My mission is to bring pro-level insights to everyone through affordable and customized coaching.
             </p>
           </div>
         </section>
@@ -114,7 +113,7 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonials" className="pt-16">
+        <section id="testimonials" className="pt-8 pb-8">
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Student Feedback Coming Soon</h2>
             <p className="text-gray-200">

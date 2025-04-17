@@ -9,7 +9,13 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen text-white bg-fixed bg-cover bg-center sm:bg-contain" style={{ backgroundImage: "url('/background.png')" }}>
+    <div
+      className="min-h-screen text-white bg-fixed bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/background.png')",
+        backgroundSize: 'cover', // Default for larger screens
+      }}
+    >
       {/* Navigation Bar */}
       <nav className="fixed top-0 w-full bg-black/70 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -48,7 +54,13 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <div className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center sm:bg-contain" style={{ backgroundImage: "url('/background.png')" }}>
+      <div
+        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/background.png')",
+          backgroundSize: 'cover', // Default for larger screens
+        }}
+      >
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10 px-6 py-8">
           <Image src="/logo.png" alt="Top Cut Gym Logo" width={100} height={100} className="rounded-full shadow-lg mx-auto" />

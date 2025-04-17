@@ -9,10 +9,12 @@ export default function HomePage() {
   };
 
   return (
-    <div
-      className="min-h-screen text-white bg-fixed bg-cover bg-center custom-background"
+    <div className="min-h-screen text-white bg-fixed bg-cover bg-center" 
       style={{
         backgroundImage: "url('/background.png')",
+        backgroundSize: "cover", 
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",  // Ensures fixed background on scroll
       }}
     >
       {/* Navigation Bar */}
@@ -54,15 +56,18 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <div
-        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 custom-background"
+        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center"
         style={{
           backgroundImage: "url('/background.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",  // Ensures fixed background on scroll
         }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="relative z-10 px-6 py-8">
+        <div className="relative z-10 px-6 py-8 max-w-7xl">
           <Image src="/logo.png" alt="Top Cut Gym Logo" width={100} height={100} className="rounded-full shadow-lg mx-auto" />
-          <h1 className="text-5xl font-bold text-yellow-500">Top Cut Gym</h1>
+          <h1 className="text-5xl font-bold text-yellow-500 leading-tight sm:text-4xl md:text-5xl lg:text-6xl">Top Cut Gym</h1>
           <p className="text-lg text-gray-100 max-w-2xl mx-auto mt-4">
             Train like a champion. Cut through the competition.
           </p>

@@ -75,7 +75,7 @@ export default function HomePage() {
         </section>
 
         {/* Why Train at Top Cut Gym Section */}
-        <section className="pt-16 pb-8">
+        <section className="pt-16 pb-12">
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-2 text-yellow-400">Why Train at Top Cut Gym?</h2>
             <ul className="list-disc list-inside space-y-1 text-gray-200">
@@ -87,11 +87,11 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Services */}
+        {/* Services Section */}
         <section id="services" className="pt-16">
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Coaching Services</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
               {/* Cards */}
               {[
                 { title: "Introduction to VGC", duration: "1 hour", price: "€15", desc: "Learn the basics of team building, game mechanics, and ladder strategies." },
@@ -110,7 +110,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Testimonials */}
+        {/* Testimonials Section */}
         <section id="testimonials" className="pt-16">
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Student Feedback Coming Soon</h2>
@@ -120,7 +120,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Contact */}
+        {/* Contact Section */}
         <section id="contact" className="pt-16">
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-2 text-yellow-400">Contact & Booking</h2>
@@ -142,6 +142,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Adding Extra Bottom Padding */}
+        <div className="pb-16"></div>
       </div>
     </div>
   );

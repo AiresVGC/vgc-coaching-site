@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 export default function HomePage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Toggle the hamburger menu on small screens
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="min-h-screen text-white bg-fixed bg-cover bg-center" style={{ backgroundImage: "url('/background.png')" }}>
       {/* Navigation Bar */}
@@ -11,7 +18,18 @@ export default function HomePage() {
             <Image src="/logo.png" alt="Top Cut Gym Logo" width={40} height={40} className="rounded-full" />
             <span className="text-xl font-bold text-yellow-400">Top Cut Gym</span>
           </div>
-          <div className="space-x-6 text-sm font-medium">
+          
+          {/* Hamburger Menu for Mobile */}
+          <div className="block lg:hidden">
+            <button onClick={toggleMenu} className="text-white focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+
+          {/* Menu items (hidden on mobile, visible on desktop) */}
+          <div className={`lg:flex space-x-6 text-sm font-medium ${isMenuOpen ? 'block' : 'hidden'}`}>
             <a href="#about" className="hover:text-yellow-400">About</a>
             <a href="#services" className="hover:text-yellow-400">Services</a>
             <a href="#testimonials" className="hover:text-yellow-400">Testimonials</a>

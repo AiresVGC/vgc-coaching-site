@@ -9,14 +9,56 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen text-white">
+    <div className="min-h-screen text-white" style={{
+      backgroundImage: "url('/background.png')",
+      backgroundSize: "cover",  // Ensures image covers the screen without stretching
+      backgroundPosition: "center", // Ensures the image is centered
+      backgroundAttachment: "fixed", // Keeps the background fixed while scrolling
+    }}>
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 w-full bg-black/70 z-50 shadow-md">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <div className="flex items-center space-x-3">
+            <Image src="/logo.png" alt="Top Cut Gym Logo" width={40} height={40} className="rounded-full" />
+            <span className="text-xl font-bold text-yellow-400">Top Cut Gym</span>
+          </div>
+
+          {/* Hamburger Menu */}
+          <div className="block lg:hidden">
+            <button onClick={toggleMenu} className="text-white focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+
+          {/* Menu Items */}
+          <div className="hidden lg:flex space-x-6 text-sm font-medium">
+            <a href="#about" className="hover:text-yellow-400">About</a>
+            <a href="#services" className="hover:text-yellow-400">Services</a>
+            <a href="#testimonials" className="hover:text-yellow-400">Testimonials</a>
+            <a href="#contact" className="hover:text-yellow-400">Contact</a>
+          </div>
+        </div>
+
+        {/* Mobile Menu Dropdown */}
+        {isMenuOpen && (
+          <div className="lg:hidden bg-black/90 px-6 pb-4 space-y-2 text-sm font-medium text-center">
+            <a href="#about" onClick={toggleMenu} className="block hover:text-yellow-400">About</a>
+            <a href="#services" onClick={toggleMenu} className="block hover:text-yellow-400">Services</a>
+            <a href="#testimonials" onClick={toggleMenu} className="block hover:text-yellow-400">Testimonials</a>
+            <a href="#contact" onClick={toggleMenu} className="block hover:text-yellow-400">Contact</a>
+          </div>
+        )}
+      </nav>
+
       {/* Hero Section */}
       <div
-        className="relative min-h-screen flex items-center justify-center text-center bg-black/70"
+        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center"
         style={{
           backgroundImage: "url('/background.png')",
-          backgroundSize: "cover", // Default for larger screens
-          backgroundPosition: "center", // Ensures the image is centered
+          backgroundSize: "cover", // Ensures image covers the screen without stretching
+          backgroundPosition: "center", // Centers the image
           backgroundAttachment: "fixed", // Keeps the background fixed while scrolling
         }}
       >
@@ -82,18 +124,40 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-      </div>
 
-      {/* Mobile Styling for Hero Section */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .hero {
-            background-size: contain !important;  // Ensures the image fits without zooming
-            background-position: center center !important;  // Keeps the image centered
-            background-attachment: scroll !important;  // Prevents fixed background on mobile, which can cause issues
-          }
-        }
-      `}</style>
+        {/* Testimonials Section */}
+        <section id="testimonials" className="pt-8 pb-8">
+          <div className="bg-black/80 p-8 rounded-xl">
+            <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Student Feedback Coming Soon</h2>
+            <p className="text-gray-200">
+              This is a new service — testimonials will be shared here once my students begin climbing the ladder!
+            </p>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="pt-16">
+          <div className="bg-black/80 p-8 rounded-xl">
+            <h2 className="text-2xl font-semibold mb-2 text-yellow-400">Contact & Booking</h2>
+            <p className="text-gray-200">Email: <a href="mailto:dig_air@hotmail.com" className="text-yellow-400 underline">dig_air@hotmail.com</a></p>
+            <p className="text-gray-200">Discord: aires.17</p>
+            <p className="mt-2 text-gray-300">To book a session, use the form below or reach out via email/Discord.</p>
+            <div className="mt-6 bg-black/80 rounded-xl overflow-hidden">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdOxUj04gzne5sRd6cM-zwjbsiTqLcUhGHSLasjujMKyye1Ig/viewform?embedded=true"
+                width="100%"
+                height="1508"
+                frameBorder="0"
+                marginHeight="0"
+                marginWidth="0"
+                className="w-full"
+              >
+                Loading…
+              </iframe>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

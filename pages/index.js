@@ -93,21 +93,22 @@ export default function HomePage() {
           <p className="text-gray-200">Discord: aires.17</p>
           <p className="mt-2 text-gray-300">To book a session, use the form below or reach out via email/Discord.</p>
 
-          {/* Booking Form with Overlay */}
-          <div className="mt-6 relative">
-            {/* Dark overlay on top of the iframe */}
-            <div className="absolute inset-0 bg-black/60 z-10"></div>
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdOxUj04gzne5sRd6cM-zwjbsiTqLcUhGHSLasjujMKyye1Ig/viewform?embedded=true"
-              width="100%"
-              height="1508"
-              frameBorder="0"
-              marginHeight="0"
-              marginWidth="0"
-              className="w-full border-2 border-yellow-500 rounded-xl z-0"
-            >
-              Loading…
-            </iframe>
+          {/* Booking Form Styling Update */}
+          <div className="mt-6">
+            {/* Form background matches the rest of the design */}
+            <div className="w-full p-4 bg-black/60 border-2 border-yellow-500 rounded-xl">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdOxUj04gzne5sRd6cM-zwjbsiTqLcUhGHSLasjujMKyye1Ig/viewform?embedded=true"
+                width="100%"
+                height="1508"
+                frameBorder="0"
+                marginHeight="0"
+                marginWidth="0"
+                className="w-full rounded-xl"
+              >
+                Loading…
+              </iframe>
+            </div>
           </div>
         </section>
 

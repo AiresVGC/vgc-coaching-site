@@ -10,7 +10,7 @@ export default function HomePage() {
 
   return (
     <div
-      className="min-h-screen text-white bg-fixed bg-cover bg-center"
+      className="min-h-screen text-white bg-fixed bg-cover bg-center sm:bg-contain"
       style={{
         backgroundImage: "url('/background.png')",
         backgroundSize: 'cover', // Default for larger screens
@@ -55,7 +55,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <div
-        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center"
+        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center sm:bg-contain"
         style={{
           backgroundImage: "url('/background.png')",
           backgroundSize: 'cover', // Default for larger screens

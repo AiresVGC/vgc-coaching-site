@@ -10,10 +10,13 @@ export default function HomePage() {
 
   return (
     <div
-      className="min-h-screen text-white bg-fixed bg-center bg-cover sm:bg-contain sm:bg-no-repeat sm:bg-center"
+      className="min-h-screen text-white"
       style={{
         backgroundImage: "url('/background.png')",
-        paddingBottom: "50px",
+        backgroundSize: "cover", // Ensures image covers the screen without stretching
+        backgroundPosition: "center", // Ensures the image is centered
+        backgroundAttachment: "fixed", // Keeps the background fixed while scrolling
+        paddingBottom: "50px", // Add space at the bottom of the page
       }}
     >
       {/* Navigation Bar */}

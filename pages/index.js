@@ -20,20 +20,20 @@ export default function HomePage() {
         </div>
       </nav>
 
-      {/* Page Content */}
-      <div className="pt-32 max-w-7xl mx-auto space-y-16 bg-black/70 p-6 rounded-xl">
-        {/* Hero Header */}
-        <header className="flex flex-col items-center space-y-4 text-center">
-          <Image src="/logo.png" alt="Top Cut Gym Logo" width={100} height={100} className="rounded-full shadow-lg" />
-          <h1 className="text-4xl font-bold text-yellow-500">Top Cut Gym</h1>
-          <p className="text-lg text-gray-100 max-w-xl">
-            Train like a champion. Cut through the competition.
-          </p>
-          <a href="#contact" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-lg text-lg">
+      {/* Hero Section */}
+      <section className="flex items-center justify-center min-h-screen text-center bg-black/70 bg-fixed bg-cover bg-center" style={{ backgroundImage: "url('/hero-background.png')" }}>
+        <div className="text-white max-w-2xl mx-auto px-4 py-8">
+          <Image src="/logo.png" alt="Top Cut Gym Logo" width={120} height={120} className="rounded-full mb-4 mx-auto" />
+          <h1 className="text-5xl font-bold text-yellow-500 mb-4">Top Cut Gym</h1>
+          <p className="text-xl text-gray-100 mb-6">Train like a champion. Cut through the competition.</p>
+          <a href="#contact" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-full text-lg transition">
             Book Your Session Now
           </a>
-        </header>
+        </div>
+      </section>
 
+      {/* Page Content */}
+      <div className="max-w-7xl mx-auto space-y-16 bg-black/70 p-6 rounded-xl">
         {/* About Me */}
         <section id="about">
           <h2 className="text-2xl font-semibold mb-2 text-yellow-400">About Me</h2>

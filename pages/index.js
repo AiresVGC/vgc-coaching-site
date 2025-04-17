@@ -5,7 +5,12 @@ export default function HomePage() {
   return (
     <div
       className="min-h-screen p-6 text-white bg-cover bg-center"
-      style={{ backgroundImage: "url('/background.png')" }} // Background image path
+      style={{
+        backgroundImage: "url('/background.png')", // Background image path
+        backgroundAttachment: "fixed", // Makes the background stay static
+        backgroundPosition: "center center", // Ensures the background is centered
+        backgroundSize: "cover", // Ensures the background fully covers the page
+      }}
     >
       <div className="max-w-7xl mx-auto space-y-10 bg-black/70 p-6 rounded-xl">
         {/* Header with Logo */}

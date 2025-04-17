@@ -3,16 +3,29 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div className="bg-black min-h-screen p-6 text-white">
-      <div className="max-w-7xl mx-auto space-y-10">
+    <div
+      className="min-h-screen p-6 text-white bg-cover bg-center"
+      style={{ backgroundImage: "url('/background.png')" }} // Background image path
+    >
+      <div className="max-w-7xl mx-auto space-y-10 bg-black/70 p-6 rounded-xl">
         {/* Header with Logo */}
         <header className="flex flex-col items-center space-y-4">
-          <Image src="/logo.png" alt="Top Cut Gym Logo" width={120} height={120} />
+          {/* Updated logo */}
+          <Image
+            src="/logo.png" // New logo path here
+            alt="Top Cut Gym Logo"
+            width={120} // Adjust size if needed
+            height={120}
+            className="rounded-full shadow-lg"
+          />
           <h1 className="text-4xl font-bold text-center text-yellow-500">Top Cut Gym</h1>
           <p className="text-lg text-center text-gray-100 max-w-xl">
             Train like a champion. Cut through the competition.
           </p>
-          <a href="#contact" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-lg text-lg">
+          <a
+            href="#contact"
+            className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-lg text-lg"
+          >
             Book Your Session Now
           </a>
         </header>
@@ -29,25 +42,25 @@ export default function HomePage() {
         <section id="services">
           <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Coaching Services</h2>
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black">
+            <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black/80">
               <h3 className="text-xl font-bold text-yellow-300">Introduction to VGC</h3>
               <p className="mt-1 text-gray-200">Duration: 1 hour</p>
               <p className="text-gray-200">Price: €15</p>
               <p className="mt-2 text-sm text-gray-400">Learn the basics of team building, game mechanics, and ladder strategies.</p>
             </div>
-            <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black">
+            <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black/80">
               <h3 className="text-xl font-bold text-yellow-300">Team Building & Strategy</h3>
               <p className="mt-1 text-gray-200">Duration: 1.5 hours</p>
               <p className="text-gray-200">Price: €25</p>
               <p className="mt-2 text-sm text-gray-400">Build a team that suits your playstyle and master the current metagame.</p>
             </div>
-            <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black">
+            <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black/80">
               <h3 className="text-xl font-bold text-yellow-300">Match Analysis & Improvement</h3>
               <p className="mt-1 text-gray-200">Duration: 1 hour</p>
               <p className="text-gray-200">Price: €20</p>
               <p className="mt-2 text-sm text-gray-400">Review past matches to improve decision-making and battle tactics.</p>
             </div>
-            <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black">
+            <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black/80">
               <h3 className="text-xl font-bold text-yellow-300">Comprehensive Coaching Package</h3>
               <p className="mt-1 text-gray-200">Duration: 4 hours</p>
               <p className="text-gray-200">Price: €60</p>

@@ -74,6 +74,19 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Why Train at Top Cut Gym Section */}
+        <section className="pt-24 pb-16">
+          <div className="bg-black/80 p-8 rounded-xl">
+            <h2 className="text-2xl font-semibold mb-2 text-yellow-400">Why Train at Top Cut Gym?</h2>
+            <ul className="list-disc list-inside space-y-1 text-gray-200">
+              <li><strong>Affordable Rates:</strong> Competitive pricing with no compromise on quality.</li>
+              <li><strong>Tailored Coaching:</strong> Every session is customized to your level and goals.</li>
+              <li><strong>Expertise:</strong> Years of experience and top ladder rankings.</li>
+              <li><strong>Driven by Passion:</strong> Helping others succeed in VGC is my mission.</li>
+            </ul>
+          </div>
+        </section>
+
         {/* Services */}
         <section id="services" className="pt-24">
           <div className="bg-black/80 p-8 rounded-xl">
@@ -127,19 +140,6 @@ export default function HomePage() {
                 Loading…
               </iframe>
             </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="pt-24 pb-16">
-          <div className="bg-black/80 p-8 rounded-xl">
-            <h2 className="text-2xl font-semibold mb-2 text-yellow-400">Why Train at Top Cut Gym?</h2>
-            <ul className="list-disc list-inside space-y-1 text-gray-200">
-              <li><strong>Affordable Rates:</strong> Competitive pricing with no compromise on quality.</li>
-              <li><strong>Tailored Coaching:</strong> Every session is customized to your level and goals.</li>
-              <li><strong>Expertise:</strong> Years of experience and top ladder rankings.</li>
-              <li><strong>Driven by Passion:</strong> Helping others succeed in VGC is my mission.</li>
-            </ul>
           </div>
         </section>
       </div>

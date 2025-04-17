@@ -29,7 +29,7 @@ export default function HomePage() {
           </div>
 
           {/* Menu items (hidden on mobile, visible on desktop) */}
-          <div className={`lg:flex space-x-6 text-sm font-medium ${isMenuOpen ? 'block' : 'hidden'}`}>
+          <div className={`lg:flex space-x-6 text-sm font-medium ${isMenuOpen ? 'block' : 'hidden'} lg:block`}>
             <a href="#about" className="hover:text-yellow-400">About</a>
             <a href="#services" className="hover:text-yellow-400">Services</a>
             <a href="#testimonials" className="hover:text-yellow-400">Testimonials</a>
@@ -54,9 +54,9 @@ export default function HomePage() {
       </div>
 
       {/* Page Content */}
-      <div className="max-w-7xl mx-auto space-y-16 bg-black/70 p-6 rounded-xl">
+      <div className="max-w-7xl mx-auto space-y-16">
         {/* About Me */}
-        <section id="about" className="pt-24 bg-black/80 p-8 rounded-xl">
+        <section id="about" className="pt-24 px-8">
           <h2 className="text-2xl font-semibold mb-2 text-yellow-400">About Me</h2>
           <p className="text-gray-200">
             I'm <strong>AiresVGC</strong>, the head coach of Top Cut Gym, with over 5 years of experience in competitive Pokémon VGC. Based in Portugal, I’ve consistently ranked top 100 and top 500 on ladder and Pokémon Showdown, and have earned Championship Points in Global Challenges. My mission is to bring pro-level insights to everyone through affordable and customized coaching.
@@ -64,7 +64,7 @@ export default function HomePage() {
         </section>
 
         {/* Coaching Services */}
-        <section id="services" className="pt-24 bg-black/80 p-8 rounded-xl">
+        <section id="services" className="pt-24 px-8">
           <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Coaching Services</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black/90">
@@ -95,7 +95,7 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials */}
-        <section id="testimonials" className="pt-24 bg-black/80 p-8 rounded-xl">
+        <section id="testimonials" className="pt-24 px-8">
           <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Student Feedback Coming Soon</h2>
           <p className="text-gray-200">
             This is a new service — testimonials will be shared here once my students begin climbing the ladder!
@@ -103,7 +103,7 @@ export default function HomePage() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="pt-24 bg-black/80 p-8 rounded-xl">
+        <section id="contact" className="pt-24 px-8">
           <h2 className="text-2xl font-semibold mb-2 text-yellow-400">Contact & Booking</h2>
           <p className="text-gray-200">Email: <a href="mailto:dig_air@hotmail.com" className="text-yellow-400 underline">dig_air@hotmail.com</a></p>
           <p className="text-gray-200">Discord: aires.17</p>
@@ -125,7 +125,7 @@ export default function HomePage() {
         </section>
 
         {/* Why Choose Top Cut Gym */}
-        <section className="pt-24 bg-black/80 p-8 rounded-xl">
+        <section className="pt-24 px-8">
           <h2 className="text-2xl font-semibold mb-2 text-yellow-400">Why Train at Top Cut Gym?</h2>
           <ul className="list-disc list-inside space-y-1 text-gray-200">
             <li><strong>Affordable Rates:</strong> Competitive pricing with no compromise on quality.</li>

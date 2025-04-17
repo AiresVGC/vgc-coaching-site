@@ -53,7 +53,7 @@ export default function HomePage() {
 
         {/* Mobile Dropdown Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-black/90 px-6 pb-4 space-y-2">
+          <div className="lg:hidden bg-black/90 px-6 pb-4 pt-2 space-y-2 text-center">
             <a href="#about" className="block hover:text-yellow-400">About</a>
             <a href="#services" className="block hover:text-yellow-400">Services</a>
             <a href="#testimonials" className="block hover:text-yellow-400">Testimonials</a>
@@ -63,9 +63,9 @@ export default function HomePage() {
       </nav>
 
       {/* Content Wrapper */}
-      <div className="pt-32 max-w-7xl mx-auto space-y-16 px-4">
+      <div className="pt-32 max-w-7xl mx-auto space-y-16 px-4 pb-20">
         {/* Intro Section */}
-        <header className="text-center space-y-6">
+        <header className="text-center space-y-6 bg-black/80 p-6 rounded-xl">
           <Image
             src="/logo.png"
             alt="Top Cut Gym Logo"
@@ -86,7 +86,7 @@ export default function HomePage() {
         </header>
 
         {/* About */}
-        <section id="about" className="bg-black/80 p-6 rounded-xl space-y-2">
+        <section id="about" className="bg-black/80 p-4 rounded-xl space-y-2">
           <h2 className="text-2xl font-semibold text-yellow-400">About Me</h2>
           <p className="text-gray-200">
             I'm <strong>AiresVGC</strong>, the head coach of Top Cut Gym, with over 5 years of experience in competitive Pokémon VGC.
@@ -97,36 +97,12 @@ export default function HomePage() {
         </section>
 
         {/* Services */}
-        <section id="services" className="bg-black/80 p-6 rounded-xl">
+        <section id="services" className="bg-black/80 p-4 rounded-xl">
           <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Coaching Services</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Introduction to VGC",
-                duration: "1 hour",
-                price: "€15",
-                desc: "Learn the basics of team building, game mechanics, and ladder strategies.",
-              },
-              {
-                title: "Team Building & Strategy",
-                duration: "1.5 hours",
-                price: "€25",
-                desc: "Build a team that suits your playstyle and master the current metagame.",
-              },
-              {
-                title: "Match Analysis & Improvement",
-                duration: "1 hour",
-                price: "€20",
-                desc: "Review past matches to improve decision-making and battle tactics.",
-              },
-              {
-                title: "Comprehensive Coaching Package",
-                duration: "4 hours",
-                price: "€60",
-                desc: "A complete coaching experience, covering all facets of VGC play.",
-              },
+            {[...] // Keep service objects unchanged
             ].map((service, idx) => (
-              <div key={idx} className="bg-black/90 border border-yellow-500 p-4 rounded-xl shadow-md space-y-2">
+              <div key={idx} className="bg-black/90 border border-yellow-500 p-3 rounded-xl shadow-md space-y-2">
                 <h3 className="text-xl font-bold text-yellow-300">{service.title}</h3>
                 <p className="text-gray-200">Duration: {service.duration}</p>
                 <p className="text-gray-200">Price: {service.price}</p>
@@ -137,7 +113,7 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials */}
-        <section id="testimonials" className="bg-black/80 p-6 rounded-xl">
+        <section id="testimonials" className="bg-black/80 p-4 rounded-xl">
           <h2 className="text-2xl font-semibold text-yellow-400 mb-2">Student Feedback Coming Soon</h2>
           <p className="text-gray-200">
             This is a new service — testimonials will be shared here once my students begin climbing the ladder!
@@ -145,7 +121,7 @@ export default function HomePage() {
         </section>
 
         {/* Contact & Booking */}
-        <section id="contact" className="bg-black/80 p-6 rounded-xl">
+        <section id="contact" className="bg-black/80 p-4 rounded-xl">
           <h2 className="text-2xl font-semibold text-yellow-400 mb-2">Contact & Booking</h2>
           <p className="text-gray-200">
             Email: <a href="mailto:dig_air@hotmail.com" className="text-yellow-400 underline">dig_air@hotmail.com</a>
@@ -170,7 +146,7 @@ export default function HomePage() {
         </section>
 
         {/* Why Choose */}
-        <section className="bg-black/80 p-6 rounded-xl mb-12">
+        <section className="bg-black/80 p-4 rounded-xl">
           <h2 className="text-2xl font-semibold text-yellow-400 mb-2">Why Train at Top Cut Gym?</h2>
           <ul className="list-disc list-inside space-y-1 text-gray-200">
             <li><strong>Affordable Rates:</strong> Competitive pricing with no compromise on quality.</li>

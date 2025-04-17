@@ -10,9 +10,10 @@ export default function HomePage() {
 
   return (
     <div
-  className="min-h-screen text-white bg-fixed bg-center bg-cover sm:bg-[length:100%_100%]"
-  style={{ backgroundImage: "url('/background.png')"
-        paddingBottom: "50px", // Add space at the bottom of the page
+      className="min-h-screen text-white bg-fixed bg-center bg-cover sm:bg-[length:100%_100%]"
+      style={{
+        backgroundImage: "url('/background.png')",
+        paddingBottom: "50px",
       }}
     >
       {/* Navigation Bar */}
@@ -51,48 +52,30 @@ export default function HomePage() {
 
           {/* Menu Items */}
           <div className="hidden lg:flex space-x-6 text-sm font-medium">
-            <a href="#about" className="hover:text-yellow-400">
-              About
-            </a>
-            <a href="#services" className="hover:text-yellow-400">
-              Services
-            </a>
-            <a href="#testimonials" className="hover:text-yellow-400">
-              Testimonials
-            </a>
-            <a href="#contact" className="hover:text-yellow-400">
-              Contact
-            </a>
+            <a href="#about" className="hover:text-yellow-400">About</a>
+            <a href="#services" className="hover:text-yellow-400">Services</a>
+            <a href="#testimonials" className="hover:text-yellow-400">Testimonials</a>
+            <a href="#contact" className="hover:text-yellow-400">Contact</a>
           </div>
         </div>
 
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
           <div className="lg:hidden bg-black/90 px-6 pb-4 space-y-2 text-sm font-medium text-center">
-            <a href="#about" onClick={toggleMenu} className="block hover:text-yellow-400">
-              About
-            </a>
-            <a href="#services" onClick={toggleMenu} className="block hover:text-yellow-400">
-              Services
-            </a>
-            <a href="#testimonials" onClick={toggleMenu} className="block hover:text-yellow-400">
-              Testimonials
-            </a>
-            <a href="#contact" onClick={toggleMenu} className="block hover:text-yellow-400">
-              Contact
-            </a>
+            <a href="#about" onClick={toggleMenu} className="block hover:text-yellow-400">About</a>
+            <a href="#services" onClick={toggleMenu} className="block hover:text-yellow-400">Services</a>
+            <a href="#testimonials" onClick={toggleMenu} className="block hover:text-yellow-400">Testimonials</a>
+            <a href="#contact" onClick={toggleMenu} className="block hover:text-yellow-400">Contact</a>
           </div>
         )}
       </nav>
 
       {/* Hero Section */}
       <div
-        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center"
+        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center sm:bg-[length:100%_100%]"
         style={{
           backgroundImage: "url('/background.png')",
-          backgroundSize: "cover", // Ensures image covers the screen without stretching
-          backgroundPosition: "center", // Centers the image
-          backgroundAttachment: "fixed", // Keeps the background fixed while scrolling
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
@@ -151,8 +134,7 @@ export default function HomePage() {
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Coaching Services</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
-              {/* Cards */}
-              {[ 
+              {[
                 { title: "Introduction to VGC", duration: "1 hour", price: "€15", desc: "Learn the basics of team building, game mechanics, and ladder strategies." },
                 { title: "Team Building & Strategy", duration: "1.5 hours", price: "€25", desc: "Build a team that suits your playstyle and master the current metagame." },
                 { title: "Match Analysis & Improvement", duration: "1 hour", price: "€20", desc: "Review past matches to improve decision-making and battle tactics." },

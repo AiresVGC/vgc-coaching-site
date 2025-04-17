@@ -69,13 +69,16 @@ export default function HomePage() {
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-2 text-yellow-400">About Me</h2>
             <p className="text-gray-200">
-              I'm <strong>AiresVGC</strong>, the head coach of Top Cut Gym, with over 5 years of experience in competitive Pokémon VGC...
+              I'm <strong>AiresVGC</strong>, the head coach of Top Cut Gym, with over 5 years of experience in competitive Pokémon VGC. 
+              I have participated in and won numerous local and regional competitions, consistently ranking among the top players in the scene. 
+              My approach is to teach players how to improve through a combination of strategic thinking, teamwork, and match analysis. 
+              Whether you are a beginner or an experienced player, I am dedicated to helping you become a top-tier competitor.
             </p>
           </div>
         </section>
 
         {/* Why Train at Top Cut Gym Section */}
-        <section className="pt-16 pb-12">
+        <section className="pt-16 pb-8">
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-2 text-yellow-400">Why Train at Top Cut Gym?</h2>
             <ul className="list-disc list-inside space-y-1 text-gray-200">
@@ -88,12 +91,12 @@ export default function HomePage() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="pt-16">
+        <section id="services" className="pt-8 pb-16">
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Coaching Services</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
               {/* Cards */}
-              {[
+              {[ 
                 { title: "Introduction to VGC", duration: "1 hour", price: "€15", desc: "Learn the basics of team building, game mechanics, and ladder strategies." },
                 { title: "Team Building & Strategy", duration: "1.5 hours", price: "€25", desc: "Build a team that suits your playstyle and master the current metagame." },
                 { title: "Match Analysis & Improvement", duration: "1 hour", price: "€20", desc: "Review past matches to improve decision-making and battle tactics." },

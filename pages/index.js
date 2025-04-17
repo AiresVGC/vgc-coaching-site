@@ -105,12 +105,12 @@ export default function HomePage() {
           <p className="text-gray-200">Email: <a href="mailto:dig_air@hotmail.com" className="text-yellow-400 underline">dig_air@hotmail.com</a></p>
           <p className="text-gray-200">Discord: aires.17</p>
           <p className="mt-2 text-gray-300">To book a session, use the form below or reach out via email/Discord.</p>
-          <div className="mt-6 bg-white rounded-xl overflow-hidden">
-            {/* Restored Google Form iframe */}
+          <div className="mt-6 bg-black/80 rounded-xl overflow-hidden">
+            {/* Google Form iframe wrapped with background */}
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSdOxUj04gzne5sRd6cM-zwjbsiTqLcUhGHSLasjujMKyye1Ig/viewform?embedded=true"
               width="100%"
-              height="1200"
+              height="1508"
               frameBorder="0"
               marginHeight="0"
               marginWidth="0"

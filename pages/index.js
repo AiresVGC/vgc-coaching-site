@@ -38,7 +38,7 @@ export default function HomePage() {
 
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-black/90 px-6 pb-4 space-y-2 text-sm font-medium">
+          <div className="lg:hidden bg-black/90 px-6 pb-4 space-y-2 text-sm font-medium text-center">
             <a href="#about" onClick={toggleMenu} className="block hover:text-yellow-400">About</a>
             <a href="#services" onClick={toggleMenu} className="block hover:text-yellow-400">Services</a>
             <a href="#testimonials" onClick={toggleMenu} className="block hover:text-yellow-400">Testimonials</a>
@@ -63,9 +63,9 @@ export default function HomePage() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto space-y-16 px-8">
+      <div className="max-w-7xl mx-auto px-8">
         {/* About Section */}
-        <section id="about" className="pt-24">
+        <section id="about" className="pt-16">
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-2 text-yellow-400">About Me</h2>
             <p className="text-gray-200">
@@ -75,7 +75,7 @@ export default function HomePage() {
         </section>
 
         {/* Why Train at Top Cut Gym Section */}
-        <section className="pt-24 pb-16">
+        <section className="pt-16 pb-8">
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-2 text-yellow-400">Why Train at Top Cut Gym?</h2>
             <ul className="list-disc list-inside space-y-1 text-gray-200">
@@ -88,7 +88,7 @@ export default function HomePage() {
         </section>
 
         {/* Services */}
-        <section id="services" className="pt-24">
+        <section id="services" className="pt-16">
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Coaching Services</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -111,7 +111,7 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials */}
-        <section id="testimonials" className="pt-24">
+        <section id="testimonials" className="pt-16">
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Student Feedback Coming Soon</h2>
             <p className="text-gray-200">
@@ -121,7 +121,7 @@ export default function HomePage() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="pt-24">
+        <section id="contact" className="pt-16">
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-2 text-yellow-400">Contact & Booking</h2>
             <p className="text-gray-200">Email: <a href="mailto:dig_air@hotmail.com" className="text-yellow-400 underline">dig_air@hotmail.com</a></p>

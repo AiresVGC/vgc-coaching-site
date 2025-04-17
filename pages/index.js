@@ -45,7 +45,7 @@ export default function HomePage() {
         {/* Coaching Services */}
         <section id="services" className="pt-24">
           <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Coaching Services</h2>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black/80">
               <h3 className="text-xl font-bold text-yellow-300">Introduction to VGC</h3>
               <p className="mt-1 text-gray-200">Duration: 1 hour</p>
@@ -88,15 +88,18 @@ export default function HomePage() {
           <p className="text-gray-200">Discord: aires.17</p>
           <p className="mt-2 text-gray-300">To book a session, use the form below or reach out via email/Discord.</p>
           <div className="mt-6 bg-white rounded-xl overflow-hidden">
+            {/* Restored Google Form iframe */}
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSdOxUj04gzne5sRd6cM-zwjbsiTqLcUhGHSLasjujMKyye1Ig/viewform?embedded=true"
               width="100%"
-              height="1508"
+              height="1200"
               frameBorder="0"
               marginHeight="0"
               marginWidth="0"
               className="w-full"
-            >Loading…</iframe>
+            >
+              Loading…
+            </iframe>
           </div>
         </section>
 

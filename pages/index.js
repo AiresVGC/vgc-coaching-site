@@ -10,10 +10,9 @@ export default function HomePage() {
 
   return (
     <div
-      className="min-h-screen text-white bg-fixed bg-cover bg-center sm:bg-contain"
+      className="min-h-screen text-white bg-fixed bg-cover bg-center custom-background"
       style={{
         backgroundImage: "url('/background.png')",
-        backgroundSize: 'cover', // Default for larger screens
       }}
     >
       {/* Navigation Bar */}
@@ -55,10 +54,9 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <div
-        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center sm:bg-contain"
+        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 custom-background"
         style={{
           backgroundImage: "url('/background.png')",
-          backgroundSize: 'cover', // Default for larger screens
         }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>

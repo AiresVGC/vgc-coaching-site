@@ -28,39 +28,30 @@ export default function HomePage() {
       <section id="services">
         <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Coaching Services</h2>
         <div className="grid gap-6 md:grid-cols-2">
-          {[
-            {
-              title: "Introduction to VGC",
-              duration: "1 hour",
-              price: "€15",
-              desc: "Learn the basics of team building, game mechanics, and ladder strategies.",
-            },
-            {
-              title: "Team Building & Strategy",
-              duration: "1.5 hours",
-              price: "€25",
-              desc: "Build a team that suits your playstyle and master the current metagame.",
-            },
-            {
-              title: "Match Analysis & Improvement",
-              duration: "1 hour",
-              price: "€20",
-              desc: "Review past matches to improve decision-making and battle tactics.",
-            },
-            {
-              title: "Comprehensive Coaching Package",
-              duration: "4 hours",
-              price: "€60",
-              desc: "A complete coaching experience, covering all facets of VGC play.",
-            },
-          ].map(({ title, duration, price, desc }) => (
-            <div key={title} className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black">
-              <h3 className="text-xl font-bold text-yellow-300">{title}</h3>
-              <p className="mt-1 text-gray-200">Duration: {duration}</p>
-              <p className="text-gray-200">Price: {price}</p>
-              <p className="mt-2 text-sm text-gray-400">{desc}</p>
-            </div>
-          ))}
+          <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black">
+            <h3 className="text-xl font-bold text-yellow-300">Introduction to VGC</h3>
+            <p className="mt-1 text-gray-200">Duration: 1 hour</p>
+            <p className="text-gray-200">Price: €15</p>
+            <p className="mt-2 text-sm text-gray-400">Learn the basics of team building, game mechanics, and ladder strategies.</p>
+          </div>
+          <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black">
+            <h3 className="text-xl font-bold text-yellow-300">Team Building & Strategy</h3>
+            <p className="mt-1 text-gray-200">Duration: 1.5 hours</p>
+            <p className="text-gray-200">Price: €25</p>
+            <p className="mt-2 text-sm text-gray-400">Build a team that suits your playstyle and master the current metagame.</p>
+          </div>
+          <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black">
+            <h3 className="text-xl font-bold text-yellow-300">Match Analysis & Improvement</h3>
+            <p className="mt-1 text-gray-200">Duration: 1 hour</p>
+            <p className="text-gray-200">Price: €20</p>
+            <p className="mt-2 text-sm text-gray-400">Review past matches to improve decision-making and battle tactics.</p>
+          </div>
+          <div className="border border-yellow-500 p-4 rounded-xl shadow-md bg-black">
+            <h3 className="text-xl font-bold text-yellow-300">Comprehensive Coaching Package</h3>
+            <p className="mt-1 text-gray-200">Duration: 4 hours</p>
+            <p className="text-gray-200">Price: €60</p>
+            <p className="mt-2 text-sm text-gray-400">A complete coaching experience, covering all facets of VGC play.</p>
+          </div>
         </div>
       </section>
 

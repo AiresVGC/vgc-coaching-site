@@ -122,8 +122,7 @@ export default function HomePage() {
           </div>
         </section>
 
-    import Script from 'next/script'; // Make sure this is at the top of your file
-
+import Script from "next/script";
 {/* Contact Section */}
 <section id="contact" className="pt-16">
   <div className="bg-black/80 p-8 rounded-xl">
@@ -135,10 +134,9 @@ export default function HomePage() {
     <p className="mt-2 text-gray-300">
       To book a session, use the form below or reach out via email/Discord.
     </p>
-
     <div className="mt-6 bg-black/80 rounded-xl overflow-hidden">
       <iframe
-        data-tally-src="https://tally.so/embed/mZyWaz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        src="https://tally.so/embed/mZyWaz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
         width="100%"
         height="595"
         frameBorder="0"
@@ -148,14 +146,17 @@ export default function HomePage() {
         className="w-full"
         loading="lazy"
       ></iframe>
+    </div>
+  </div>
+</section>
 
-      <Script
-        id="tally-js"
-        src="https://tally.so/widgets/embed.js"
-        onLoad={() => {
-          if (window.Tally) window.Tally.loadEmbeds();
-        }}
-      />
+<Script
+  id="tally-js"
+  src="https://tally.so/widgets/embed.js"
+  onLoad={() => {
+    if (window.Tally) window.Tally.loadEmbeds();
+  }}
+/>
     </div>
   </div>
 </section>

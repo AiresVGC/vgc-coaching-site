@@ -1,6 +1,6 @@
-import Script from "next/script";
 import React, { useState } from "react";
 import Image from "next/image";
+import Script from "next/script"; // ✅ Correctly imported at the top
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,20 +10,43 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen text-white bg-fixed bg-cover bg-center" style={{ backgroundImage: "url('/background.png')" }}>
+    <div
+      className="min-h-screen text-white bg-fixed bg-cover bg-center"
+      style={{ backgroundImage: "url('/background.png')" }}
+    >
       {/* Navigation Bar */}
       <nav className="fixed top-0 w-full bg-black/70 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <Image src="/logo.png" alt="Top Cut Gym Logo" width={40} height={40} className="rounded-full" />
+            <Image
+              src="/logo.png"
+              alt="Top Cut Gym Logo"
+              width={40}
+              height={40}
+              className="rounded-full"
+            />
             <span className="text-xl font-bold text-yellow-400">Top Cut Gym</span>
           </div>
 
           {/* Hamburger Menu */}
           <div className="block lg:hidden">
-            <button onClick={toggleMenu} className="text-white focus:outline-none">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <button
+              onClick={toggleMenu}
+              className="text-white focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
               </svg>
             </button>
           </div>
@@ -95,8 +118,7 @@ export default function HomePage() {
           <div className="bg-black/80 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Coaching Services</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
-              {/* Cards */}
-              {[ 
+              {[
                 { title: "Introduction to VGC", duration: "1 hour", price: "€15", desc: "Learn the basics of team building, game mechanics, and ladder strategies." },
                 { title: "Team Building & Strategy", duration: "1.5 hours", price: "€25", desc: "Build a team that suits your playstyle and master the current metagame." },
                 { title: "Match Analysis & Improvement", duration: "1 hour", price: "€20", desc: "Review past matches to improve decision-making and battle tactics." },
@@ -123,48 +145,49 @@ export default function HomePage() {
           </div>
         </section>
 
-{/* Contact Section */}
-<section id="contact" className="pt-16">
-  <div className="bg-black/80 p-8 rounded-xl">
-    <h2 className="text-2xl font-semibold mb-2 text-yellow-400">Contact & Booking</h2>
-    <p className="text-gray-200">
-      Email: <a href="mailto:dig_air@hotmail.com" className="text-yellow-400 underline">dig_air@hotmail.com</a>
-    </p>
-    <p className="text-gray-200">Discord: aires.17</p>
-    <p className="mt-2 text-gray-300">
-      To book a session, use the form below or reach out via email/Discord.
-    </p>
-    <div className="mt-6 bg-black/80 rounded-xl overflow-hidden">
-      <iframe
-        src="https://tally.so/embed/mZyWaz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-        width="100%"
-        height="595"
-        frameBorder="0"
-        marginHeight="0"
-        marginWidth="0"
-        title="AiresVGC Coaching Booking Form"
-        className="w-full"
-        loading="lazy"
-      ></iframe>
-    </div>
-  </div>
-</section>
+        {/* Contact Section */}
+        <section id="contact" className="pt-16">
+          <div className="bg-black/80 p-8 rounded-xl">
+            <h2 className="text-2xl font-semibold mb-2 text-yellow-400">Contact & Booking</h2>
+            <p className="text-gray-200">
+              Email: <a href="mailto:dig_air@hotmail.com" className="text-yellow-400 underline">dig_air@hotmail.com</a>
+            </p>
+            <p className="text-gray-200">Discord: aires.17</p>
+            <p className="mt-2 text-gray-300">
+              To book a session, use the form below or reach out via email/Discord.
+            </p>
 
-<Script
-  id="tally-js"
-  src="https://tally.so/widgets/embed.js"
-  onLoad={() => {
-    if (window.Tally) window.Tally.loadEmbeds();
-  }}
-/>
-    </div>
-  </div>
-</section>
+            <div className="mt-6 bg-black/80 rounded-xl overflow-hidden">
+              <iframe
+                data-tally-src="https://tally.so/embed/mZyWaz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                width="100%"
+                height="595"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                title="AiresVGC Coaching Booking Form"
+                className="w-full"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </section>
 
-
-        {/* Adding Extra Bottom Padding */}
+        {/* Bottom Padding */}
         <div className="pb-16"></div>
       </div>
+
+      {/* Tally Embed Script */}
+      <Script
+        id="tally-js"
+        src="https://tally.so/widgets/embed.js"
+        strategy="lazyOnload"
+        onLoad={() => {
+          if (typeof window !== "undefined" && window.Tally) {
+            window.Tally.loadEmbeds();
+          }
+        }}
+      />
     </div>
   );
 }

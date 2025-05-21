@@ -90,15 +90,7 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <div
-        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/background.png')",
-          backgroundSize: "cover", // Ensures image covers the screen without stretching
-          backgroundPosition: "center", // Centers the image
-          backgroundAttachment: "fixed", // Keeps the background fixed while scrolling
-        }}
-      >
+<div className="relative min-h-screen flex items-center justify-center text-center bg-black/70">
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10 px-6 py-8 max-w-7xl">
           <Image

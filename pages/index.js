@@ -130,17 +130,30 @@ export default function HomePage() {
             <p className="text-gray-200">Discord: aires.17</p>
             <p className="mt-2 text-gray-300">To book a session, use the form below or reach out via email/Discord.</p>
             <div className="mt-6 bg-black/80 rounded-xl overflow-hidden">
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSdOxUj04gzne5sRd6cM-zwjbsiTqLcUhGHSLasjujMKyye1Ig/viewform?embedded=true"
-                width="100%"
-                height="1508"
-                frameBorder="0"
-                marginHeight="0"
-                marginWidth="0"
-                className="w-full"
-              >
-                Loading…
-              </iframe>
+       import Script from 'next/script';
+
+// Inside your component, in the Contact & Booking section:
+<div className="mt-6 bg-black/80 rounded-xl overflow-hidden">
+  <iframe
+    data-tally-src="https://tally.so/embed/mZyWaz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+    width="100%"
+    height="595"
+    frameBorder="0"
+    marginHeight="0"
+    marginWidth="0"
+    title="AiresVGC Coaching Booking Form"
+    className="w-full"
+    loading="lazy"
+  ></iframe>
+
+  <Script
+    id="tally-js"
+    src="https://tally.so/widgets/embed.js"
+    onLoad={() => {
+      if (window.Tally) window.Tally.loadEmbeds();
+    }}
+  />
+</div>
             </div>
           </div>
         </section>

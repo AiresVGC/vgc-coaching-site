@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Image from "next/image";
 
@@ -10,20 +9,45 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen text-white bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/background.png')" }}>
+    <div
+      className="min-h-screen text-white"
+      style={{
+        backgroundImage: "url('/background.png')",
+        backgroundSize: "cover",  // Ensure background image covers the screen
+        backgroundPosition: "center",  // Center the image
+        paddingBottom: "50px",  // Add space at the bottom of the page
+      }}
+    >
       {/* Navigation Bar */}
       <nav className="fixed top-0 w-full bg-black/70 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <Image src="/logo.png" alt="Top Cut Gym Logo" width={40} height={40} className="rounded-full" />
+            <Image
+              src="/logo.png"
+              alt="Top Cut Gym Logo"
+              width={40}
+              height={40}
+              className="rounded-full"
+            />
             <span className="text-xl font-bold text-yellow-400">Top Cut Gym</span>
           </div>
 
           {/* Hamburger Menu */}
           <div className="block lg:hidden">
             <button onClick={toggleMenu} className="text-white focus:outline-none">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
               </svg>
             </button>
           </div>
@@ -49,19 +73,34 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <div className="relative w-full min-h-screen sm:min-h-[80vh] md:min-h-[70vh] lg:min-h-[60vh]">
-        {/* Background Image */}
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/background.png')" }} />
-
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black opacity-60" />
-
-        {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-6 py-8">
-          <Image src="/logo.png" alt="Top Cut Gym Logo" width={100} height={100} className="rounded-full shadow-lg mx-auto" />
-          <h1 className="text-5xl font-bold text-yellow-500 leading-tight sm:text-4xl md:text-5xl lg:text-6xl">Top Cut Gym</h1>
-          <p className="text-lg text-gray-100 max-w-2xl mx-auto mt-4">Train like a champion. Cut through the competition.</p>
-          <a href="#contact" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-lg text-lg mt-6">Book Your Session Now</a>
+      <div
+        className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center sm:bg-cover"
+        style={{
+          backgroundImage: "url('/background.png')",
+          height: "100vh",  // Ensures hero section covers full height of the screen
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+        <div className="relative z-10 px-6 py-8 max-w-7xl">
+          <Image
+            src="/logo.png"
+            alt="Top Cut Gym Logo"
+            width={100}
+            height={100}
+            className="rounded-full shadow-lg mx-auto"
+          />
+          <h1 className="text-5xl font-bold text-yellow-500 leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
+            Top Cut Gym
+          </h1>
+          <p className="text-lg text-gray-100 max-w-2xl mx-auto mt-4">
+            Train like a champion. Cut through the competition.
+          </p>
+          <a
+            href="#contact"
+            className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-lg text-lg mt-6"
+          >
+            Book Your Session Now
+          </a>
         </div>
       </div>
 

@@ -1,3 +1,4 @@
+import Script from "next/script";
 import React, { useState } from "react";
 import Image from "next/image";
 
@@ -122,7 +123,9 @@ export default function HomePage() {
           </div>
         </section>
 
-import Script from "next/script";
+
+{/* Contact Section */}
+
 {/* Contact Section */}
 <section id="contact" className="pt-16">
   <div className="bg-black/80 p-8 rounded-xl">
@@ -157,6 +160,36 @@ import Script from "next/script";
     if (window.Tally) window.Tally.loadEmbeds();
   }}
 />
+  <div className="bg-black/80 p-8 rounded-xl">
+    <h2 className="text-2xl font-semibold mb-2 text-yellow-400">Contact & Booking</h2>
+    <p className="text-gray-200">
+      Email: <a href="mailto:dig_air@hotmail.com" className="text-yellow-400 underline">dig_air@hotmail.com</a>
+    </p>
+    <p className="text-gray-200">Discord: aires.17</p>
+    <p className="mt-2 text-gray-300">
+      To book a session, use the form below or reach out via email/Discord.
+    </p>
+
+    <div className="mt-6 bg-black/80 rounded-xl overflow-hidden">
+      <iframe
+        data-tally-src="https://tally.so/embed/mZyWaz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        width="100%"
+        height="595"
+        frameBorder="0"
+        marginHeight="0"
+        marginWidth="0"
+        title="AiresVGC Coaching Booking Form"
+        className="w-full"
+        loading="lazy"
+      ></iframe>
+
+      <Script
+        id="tally-js"
+        src="https://tally.so/widgets/embed.js"
+        onLoad={() => {
+          if (window.Tally) window.Tally.loadEmbeds();
+        }}
+      />
     </div>
   </div>
 </section>

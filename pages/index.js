@@ -9,115 +9,54 @@ export default function HomePage() {
   };
 
   return (
-    <div
-      className="min-h-screen text-white"
-      style={{
-        backgroundImage: "url('/background.png')",
-        backgroundSize: "cover", // Ensures image covers the screen without stretching
-        backgroundPosition: "center", // Ensures the image is centered
-        backgroundAttachment: "fixed", // Keeps the background fixed while scrolling
-        paddingBottom: "50px", // Add space at the bottom of the page
-      }}
-    >
+    <div className="min-h-screen text-white bg-fixed bg-cover bg-center" style={{ backgroundImage: "url('/background.png')" }}>
       {/* Navigation Bar */}
       <nav className="fixed top-0 w-full bg-black/70 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <Image
-              src="/logo.png"
-              alt="Top Cut Gym Logo"
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
+            <Image src="/logo.png" alt="Top Cut Gym Logo" width={40} height={40} className="rounded-full" />
             <span className="text-xl font-bold text-yellow-400">Top Cut Gym</span>
           </div>
 
           {/* Hamburger Menu */}
           <div className="block lg:hidden">
             <button onClick={toggleMenu} className="text-white focus:outline-none">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="h-6 w-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
           </div>
 
           {/* Menu Items */}
           <div className="hidden lg:flex space-x-6 text-sm font-medium">
-            <a href="#about" className="hover:text-yellow-400">
-              About
-            </a>
-            <a href="#services" className="hover:text-yellow-400">
-              Services
-            </a>
-            <a href="#testimonials" className="hover:text-yellow-400">
-              Testimonials
-            </a>
-            <a href="#contact" className="hover:text-yellow-400">
-              Contact
-            </a>
+            <a href="#about" className="hover:text-yellow-400">About</a>
+            <a href="#services" className="hover:text-yellow-400">Services</a>
+            <a href="#testimonials" className="hover:text-yellow-400">Testimonials</a>
+            <a href="#contact" className="hover:text-yellow-400">Contact</a>
           </div>
         </div>
 
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
           <div className="lg:hidden bg-black/90 px-6 pb-4 space-y-2 text-sm font-medium text-center">
-            <a href="#about" onClick={toggleMenu} className="block hover:text-yellow-400">
-              About
-            </a>
-            <a href="#services" onClick={toggleMenu} className="block hover:text-yellow-400">
-              Services
-            </a>
-            <a href="#testimonials" onClick={toggleMenu} className="block hover:text-yellow-400">
-              Testimonials
-            </a>
-            <a href="#contact" onClick={toggleMenu} className="block hover:text-yellow-400">
-              Contact
-            </a>
+            <a href="#about" onClick={toggleMenu} className="block hover:text-yellow-400">About</a>
+            <a href="#services" onClick={toggleMenu} className="block hover:text-yellow-400">Services</a>
+            <a href="#testimonials" onClick={toggleMenu} className="block hover:text-yellow-400">Testimonials</a>
+            <a href="#contact" onClick={toggleMenu} className="block hover:text-yellow-400">Contact</a>
           </div>
         )}
       </nav>
 
       {/* Hero Section */}
-<div
-  className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center"
-  style={{
-    backgroundImage: "url('/background.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundAttachment: "fixed",
-  }}
->
+      <div className="relative min-h-screen flex items-center justify-center text-center bg-black/70 bg-cover bg-center" style={{ backgroundImage: "url('/background.png')" }}>
         <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="relative z-10 px-6 py-8 max-w-7xl">
-          <Image
-            src="/logo.png"
-            alt="Top Cut Gym Logo"
-            width={100}
-            height={100}
-            className="rounded-full shadow-lg mx-auto"
-          />
-          <h1 className="text-5xl font-bold text-yellow-500 leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
-            Top Cut Gym
-          </h1>
+        <div className="relative z-10 px-6 py-8">
+          <Image src="/logo.png" alt="Top Cut Gym Logo" width={100} height={100} className="rounded-full shadow-lg mx-auto" />
+          <h1 className="text-5xl font-bold text-yellow-500">Top Cut Gym</h1>
           <p className="text-lg text-gray-100 max-w-2xl mx-auto mt-4">
             Train like a champion. Cut through the competition.
           </p>
-          <a
-            href="#contact"
-            className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-lg text-lg mt-6"
-          >
+          <a href="#contact" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-lg text-lg mt-6">
             Book Your Session Now
           </a>
         </div>
@@ -205,6 +144,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Adding Extra Bottom Padding */}
+        <div className="pb-16"></div>
       </div>
     </div>
   );

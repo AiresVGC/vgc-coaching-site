@@ -130,10 +130,6 @@ export default function HomePage() {
             <p className="text-gray-200">Discord: aires.17</p>
             <p className="mt-2 text-gray-300">To book a session, use the form below or reach out via email/Discord.</p>
             <div className="mt-6 bg-black/80 rounded-xl overflow-hidden">
-       import Script from 'next/script';
-
-// Inside your component, in the Contact & Booking section:
-<div className="mt-6 bg-black/80 rounded-xl overflow-hidden">
   <iframe
     data-tally-src="https://tally.so/embed/mZyWaz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
     width="100%"

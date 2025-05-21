@@ -10,14 +10,6 @@ export default function HomePage() {
   };
 
   return (
-  <>
-    <Head>
-      <title>Top Cut Gym | VGC Coaching by AiresVGC</title>
-      <meta name="description" content="Affordable and expert Pokémon VGC coaching by AiresVGC. Book your session today!" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="google-site-verification" content="vKdDiBKxveGrAct84WGvioI1pg-5jYe_D01q7Z_xho4" />
-    </Head>
     <div
       className="min-h-screen text-white bg-fixed bg-cover bg-center"
       style={{ backgroundImage: "url('/background.png')" }}
@@ -34,8 +26,7 @@ export default function HomePage() {
               className="rounded-full"
             />
             <span className="text-xl font-bold text-yellow-400">Top Cut Gym</span>
-    </div>
-  </>
+          </div>
 
           {/* Hamburger Menu */}
           <div className="block lg:hidden">

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import Head from "next/head"; // ✅ Added
 import Image from "next/image";
-import Script from "next/script"; // ✅ Correctly imported at the top
+import Script from "next/script";
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,10 +11,19 @@ export default function HomePage() {
   };
 
   return (
-    <div
-      className="min-h-screen text-white bg-fixed bg-cover bg-center"
-      style={{ backgroundImage: "url('/background.png')" }}
-    >
+    <>
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="vKdDiBKxveGrAct84WGvioI1pg-5jYe_D01q7Z_xho4"
+        />
+        <title>Top Cut Gym - AiresVGC</title>
+      </Head>
+
+      <div
+        className="min-h-screen text-white bg-fixed bg-cover bg-center"
+        style={{ backgroundImage: "url('/background.png')" }}
+      >
       {/* Navigation Bar */}
       <nav className="fixed top-0 w-full bg-black/70 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">

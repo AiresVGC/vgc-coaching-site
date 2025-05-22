@@ -169,7 +169,7 @@ export default function HomePage() {
 
             <div className="mt-6 bg-black/80 rounded-xl overflow-hidden">
               <iframe
-                data-tally-src="https://tally.so/embed/mZyWaz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                src="https://tally.so/embed/mZyWaz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                 width="100%"
                 height="595"
                 frameBorder="0"
@@ -192,11 +192,6 @@ export default function HomePage() {
         id="tally-js"
         src="https://tally.so/widgets/embed.js"
         strategy="lazyOnload"
-        onLoad={() => {
-          if (typeof window !== "undefined" && window.Tally) {
-            window.Tally.loadEmbeds();
-          }
-        }}
       />
     </div>
   );

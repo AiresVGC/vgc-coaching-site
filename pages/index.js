@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Script from "next/script"; // ✅ Correctly imported at the top
-import Head from "next/head"; // ✅ Add this line
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,14 +10,6 @@ export default function HomePage() {
   };
 
   return (
-    <>
-    <Head>
-      <meta
-        name="google-site-verification"
-        content="vKdDiBKxveGrAct84WGvioI1pg-5jYe_D01q7Z_xho4"
-      />
-      <title>Top Cut Gym - AiresVGC</title>
-    </Head>
     <div
       className="min-h-screen text-white bg-fixed bg-cover bg-center"
       style={{ backgroundImage: "url('/background.png')" }}

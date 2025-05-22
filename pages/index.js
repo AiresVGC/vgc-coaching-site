@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Head from "next/head"; // ✅ Added
 import Image from "next/image";
-import Script from "next/script";
+import Script from "next/script"; // ✅ Correctly imported at the top
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,19 +10,10 @@ export default function HomePage() {
   };
 
   return (
-    <>
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="vKdDiBKxveGrAct84WGvioI1pg-5jYe_D01q7Z_xho4"
-        />
-        <title>Top Cut Gym - AiresVGC</title>
-      </Head>
-
-      <div
-        className="min-h-screen text-white bg-fixed bg-cover bg-center"
-        style={{ backgroundImage: "url('/background.png')" }}
-      >
+    <div
+      className="min-h-screen text-white bg-fixed bg-cover bg-center"
+      style={{ backgroundImage: "url('/background.png')" }}
+    >
       {/* Navigation Bar */}
       <nav className="fixed top-0 w-full bg-black/70 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -169,7 +159,7 @@ export default function HomePage() {
 
             <div className="mt-6 bg-black/80 rounded-xl overflow-hidden">
               <iframe
-                src="https://tally.so/embed/mZyWaz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                data-tally-src="https://tally.so/embed/mZyWaz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                 width="100%"
                 height="595"
                 frameBorder="0"
@@ -192,6 +182,11 @@ export default function HomePage() {
         id="tally-js"
         src="https://tally.so/widgets/embed.js"
         strategy="lazyOnload"
+        onLoad={() => {
+          if (typeof window !== "undefined" && window.Tally) {
+            window.Tally.loadEmbeds();
+          }
+        }}
       />
     </div>
   );

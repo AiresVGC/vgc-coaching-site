@@ -2,19 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Script from "next/script"; // ✅ Correctly imported at the top
 
-import Head from "next/head";
-
 export default function HomePage() {
-  return (
-    <>
-      <Head>
-        <title>Top Cut Gym | VGC Coaching by AiresVGC</title>
-        <meta name="description" content="Affordable and expert Pokémon VGC coaching by AiresVGC. Book your session today!" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="google-site-verification" content="vKdDiBKxveGrAct84WGvioI1pg-5jYe_D01q7Z_xho4" />
-      </Head>
-      <div
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -38,8 +26,7 @@ export default function HomePage() {
               className="rounded-full"
             />
             <span className="text-xl font-bold text-yellow-400">Top Cut Gym</span>
-</div>
-    </>
+          </div>
 
           {/* Hamburger Menu */}
           <div className="block lg:hidden">
@@ -62,8 +49,7 @@ export default function HomePage() {
                 ></path>
               </svg>
             </button>
-</div>
-    </>
+          </div>
 
           {/* Menu Items */}
           <div className="hidden lg:flex space-x-6 text-sm font-medium">
@@ -71,10 +57,8 @@ export default function HomePage() {
             <a href="#services" className="hover:text-yellow-400">Services</a>
             <a href="#testimonials" className="hover:text-yellow-400">Testimonials</a>
             <a href="#contact" className="hover:text-yellow-400">Contact</a>
-</div>
-    </>
-</div>
-    </>
+          </div>
+        </div>
 
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
@@ -83,8 +67,7 @@ export default function HomePage() {
             <a href="#services" onClick={toggleMenu} className="block hover:text-yellow-400">Services</a>
             <a href="#testimonials" onClick={toggleMenu} className="block hover:text-yellow-400">Testimonials</a>
             <a href="#contact" onClick={toggleMenu} className="block hover:text-yellow-400">Contact</a>
-</div>
-    </>
+          </div>
         )}
       </nav>
 
@@ -100,10 +83,8 @@ export default function HomePage() {
           <a href="#contact" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-lg text-lg mt-6">
             Book Your Session Now
           </a>
-</div>
-    </>
-</div>
-    </>
+        </div>
+      </div>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-8">
@@ -116,8 +97,7 @@ export default function HomePage() {
               Based in Portugal, I’ve consistently ranked top 100 and top 500 on ladder and Pokémon Showdown, and have earned Championship Points
               in Global Challenges. My mission is to bring pro-level insights to everyone through affordable and customized coaching.
             </p>
-</div>
-    </>
+          </div>
         </section>
 
         {/* Why Train at Top Cut Gym Section */}
@@ -130,8 +110,7 @@ export default function HomePage() {
               <li><strong>Expertise:</strong> Years of experience and top ladder rankings.</li>
               <li><strong>Driven by Passion:</strong> Helping others succeed in VGC is my mission.</li>
             </ul>
-</div>
-    </>
+          </div>
         </section>
 
         {/* Services Section */}
@@ -150,13 +129,10 @@ export default function HomePage() {
                   <p className="mt-1 text-gray-200">Duration: {duration}</p>
                   <p className="text-gray-200">Price: {price}</p>
                   <p className="mt-2 text-sm text-gray-400">{desc}</p>
-</div>
-    </>
+                </div>
               ))}
-</div>
-    </>
-</div>
-    </>
+            </div>
+          </div>
         </section>
 
         {/* Testimonials Section */}
@@ -166,8 +142,7 @@ export default function HomePage() {
             <p className="text-gray-200">
               This is a new service — testimonials will be shared here once my students begin climbing the ladder!
             </p>
-</div>
-    </>
+          </div>
         </section>
 
         {/* Contact Section */}
@@ -194,16 +169,13 @@ export default function HomePage() {
                 className="w-full"
                 loading="lazy"
               ></iframe>
-</div>
-    </>
-</div>
-    </>
+            </div>
+          </div>
         </section>
 
         {/* Bottom Padding */}
         <div className="pb-16"></div>
-</div>
-    </>
+      </div>
 
       {/* Tally Embed Script */}
       <Script
@@ -216,7 +188,6 @@ export default function HomePage() {
           }
         }}
       />
-</div>
-    </>
+    </div>
   );
 }
